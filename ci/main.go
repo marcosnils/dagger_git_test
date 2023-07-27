@@ -66,7 +66,6 @@ func main() {
 		WithDirectory("/app", gitDir).
 		WithDirectory("/app", cdir).
 		WithWorkdir("/app").
-		WithWorkdir("/app").
 		WithEnvVariable("CGO_ENABLED", "0").
 		WithExec([]string{"go", "build", "-o", "dagger_git_test"}).
 		File("dagger_git_test").Export(ctx, "dagger_git_test")
